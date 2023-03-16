@@ -83,9 +83,10 @@ palindromeReader(insertWord)
 function evenOdd(evenOrOdd){
     
     if (evenOrOdd === 'pari' || evenOrOdd === 'dispari'){
+        console.log(true)
         return true
     }
-    console.log('devi scrivere pari o dispari')
+    alert('devi scrivere pari o dispari')
     return false
 }
 
@@ -125,6 +126,7 @@ function isbetween (number){
     console.log('ok è compreso')
  }
  else{
+    userNumber
     console.log('non è compreso')
  }
 
@@ -152,7 +154,7 @@ console.log(numberSum)
 
 function isEven(numb){
     if (numb % 2 == 0) {
-        return true
+        return 'pari'
     }
 
     return false
@@ -160,7 +162,7 @@ function isEven(numb){
 
 function isOdd(numb){
     if (numb % 2 != 0) {
-        return true
+        return 'dispari'
     }
 
     return false
@@ -168,7 +170,7 @@ function isOdd(numb){
 
 
 
-if(isEven(numberSum) == ask || isOdd(numberSum) == ask){
+if(isEven(numberSum) === ask || isOdd(numberSum) === ask){
     console.log("hai vinto!!")
      h1El.innerHTML = "Hai Vinto!!" 
     
