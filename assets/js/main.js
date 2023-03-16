@@ -13,3 +13,13 @@ console.log(word)
 
 //controllo se la/e parola/e inserite sono palindrome con una funzione
 
+// creo il ciclo for che leggerà la parola al contrario
+// i è uguale alla lunghezza della parola inserita - 1 (perchè conta da zero)
+// la condizione è che "i" arrivi alla posizione 0 partendo dll'ultima, ovvero la prima lettera della parola, per farlo uso un decremento 
+let backwords;
+
+for (let i = word.length - 1; i >= 0; i--) {
+    backwords += word[i];
+    console.log(backwords)
+    
+}
