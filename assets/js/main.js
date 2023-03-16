@@ -6,10 +6,6 @@ L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. Generiamo un n
 
 
 
-//chiedo all'utente la parola e la stampo in console
-
-const word = prompt('scrivi una parola');
-console.log(`la tua parola è ${word}`)
 
 
 
@@ -41,19 +37,145 @@ console.log(backwords)
 
 
 
-function palindromeReader(words){
+function palindromeReader(word){
     let backwords = '';
 
     for (let i = word.length - 1; i >= 0; i--) {
-
+       
         backwords += word[i];
+       
+    }
+    console.log(backwords)
+    if (backwords === word) {
+        console.log('é palindroma')    
+       return true
     }
 
-    if (backwords === word) {
+    else{
+        console.log('non è palindroma')
+        return false
+    
+    }
+    
+    
+}
+
+//chiedo all'utente la parola e la stampo in console
+
+const insertWord = prompt('scrivi una parola');
+console.log(`la tua parola è ${insertWord}`)
+
+palindromeReader(insertWord) 
+
+
+
+
+
+
+
+
+
+
+//pari o dispari
+
+//chiedo all'utente pari o dispari
+
+function evenOdd(evenOrOdd){
+    
+    if (evenOrOdd === 'pari' || evenOrOdd === 'dispari'){
+        return true
+    }
+    return false
+}
+
+const ask = prompt('pari o dispari?')
+
+if (evenOdd(ask)){
+    console.log('ok')
+}
+else{
+    console.log('scegli pari o dispari')
+}
+
+console.log(ask)
+
+//chiedo un numero compreso tra 1 e 5 all'utente con un prompt
+
+
+
+function isbetween (number){
+
+    if (number <= 5 && number >= 1) {
+        console.log(number)
+        return true
+    }
+        
+    return false
+      
+     
+}
+
+//chiedo il numero 
+
+ let userNumber = Number(prompt('scrivi un numero compreso tra 1 e 5'))
+
+
+ if (isbetween(userNumber)){
+    console.log('ok è compreso')
+ }
+ else{
+    console.log('non è compreso')
+ }
+
+//creo una funzione per generare un numero da 1 a 5
+
+ function getRandomInteger(min, max){
+    return Number(Math.floor(Math.random() * (max - min +1) + min));
+
+    
+}
+
+
+
+const randNumber = getRandomInteger(1, 5)
+console.log(randNumber);
+
+
+// faccio l'addizione dei due numeri e con una funzione verifico se il numero è pari o dispari
+
+const h1El = document.querySelector('h1')
+
+const numberSum = userNumber + randNumber;
+console.log(numberSum)
+
+
+function isEven(numb){
+    if (numb % 2 == 0) {
         return true
     }
 
     return false
+}
 
+function isOdd(numb){
+    if (numb % 2 != 0) {
+        return true
+    }
+
+    return false
+}
+
+if(isEven(numberSum) == ask || isOdd(numberSum) == ask){
+    console.log("hai vinto!!")
+    h1El.innerHTML = "HAI VINTO!!"
+    
+   
+}
+else{
+    console.log("hai perso")
+    h1El.innerHTML = "HAI PERSO!!!!"
     
 }
+
+
+//comunico la vittoria opp la socnfitta
