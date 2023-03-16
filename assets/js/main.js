@@ -85,6 +85,7 @@ function evenOdd(evenOrOdd){
     if (evenOrOdd === 'pari' || evenOrOdd === 'dispari'){
         return true
     }
+    console.log('devi scrivere pari o dispari')
     return false
 }
 
@@ -165,15 +166,17 @@ function isOdd(numb){
     return false
 }
 
+
+
 if(isEven(numberSum) == ask || isOdd(numberSum) == ask){
     console.log("hai vinto!!")
-    h1El.innerHTML = "HAI VINTO!!"
+     h1El.innerHTML = "Hai Vinto!!" 
     
-   
+
 }
 else{
     console.log("hai perso")
-    h1El.innerHTML = "HAI PERSO!!!!"
+     h1El.innerHTML = "Hai Perso!!!!" 
     
 }
 
